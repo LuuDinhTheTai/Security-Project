@@ -1,9 +1,9 @@
 package com.utc.securityproject.service.impl;
 
-import com.hina.socialmedia.entity.Account;
-import com.hina.socialmedia.repository.AccountRepository;
-import com.hina.socialmedia.service.AccountService;
-import com.hina.socialmedia.service.base.impl.BaseServiceImpl;
+import com.utc.securityproject.entity.Account;
+import com.utc.securityproject.repository.AccountRepository;
+import com.utc.securityproject.service.AccountService;
+import com.utc.securityproject.service.base.impl.BaseServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

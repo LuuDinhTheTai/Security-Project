@@ -1,10 +1,10 @@
 package com.utc.securityproject.service.base.impl;
 
-import com.hina.socialmedia.entity.base.BaseEntity;
-import com.hina.socialmedia.exception.AppException;
-import com.hina.socialmedia.exception.ErrorCode;
-import com.hina.socialmedia.repository.base.BaseRepository;
-import com.hina.socialmedia.service.base.BaseService;
+import com.utc.securityproject.entity.base.BaseEntity;
+import com.utc.securityproject.exception.AppException;
+import com.utc.securityproject.exception.ErrorCode;
+import com.utc.securityproject.repository.base.BaseRepository;
+import com.utc.securityproject.service.base.BaseService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 
@@ -26,19 +26,19 @@ public class BaseServiceImpl<T extends BaseEntity> implements BaseService<T> {
   }
 
   @Override
-  public void delete(Long id) {
+  public void delete(String id) {
     log.info("(delete) id: {}", id);
     repository.deleteById(id);
   }
 
   @Override
-  public T find(Long id) {
+  public T find(String id) {
     log.debug("(find) id: {}", id);
     return repository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ENTITY_NOT_FOUND));
   }
 
   @Override
-  public boolean isExist(Long id) {
+  public boolean isExist(String id) {
     log.debug("(isExist) id: {}", id);
     return repository.existsById(id);
   }
@@ -58,20 +58,4 @@ public class BaseServiceImpl<T extends BaseEntity> implements BaseService<T> {
   public List<T> list() {
     return repository.findAll();
   }
-
-//  private void copyNonNullProperties(T source, T target) {
-//    BeanUtils.copyProperties(source, target, getNullPropertyNames(source));
-//  }
-//
-//  private String[] getNullPropertyNames(Object source) {
-//    final BeanWrapper src = new BeanWrapperImpl(source);
-//    PropertyDescriptor[] pds = src.getPropertyDescriptors();
-//
-//    Set<String> emptyNames = new HashSet<>();
-//    for (PropertyDescriptor pd : pds) {
-//      Object srcValue = src.getPropertyValue(pd.getName());
-//      if (srcValue == null) emptyNames.add(pd.getName());
-//    }
-//    return emptyNames.toArray(new String[0]);
-//  }
 }

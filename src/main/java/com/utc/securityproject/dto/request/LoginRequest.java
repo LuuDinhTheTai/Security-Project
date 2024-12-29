@@ -1,6 +1,6 @@
 package com.utc.securityproject.dto.request;
 
-import com.hina.socialmedia.validation.ValidateEmail;
+import com.utc.securityproject.validation.ValidateEmail;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 import lombok.NoArgsConstructor;

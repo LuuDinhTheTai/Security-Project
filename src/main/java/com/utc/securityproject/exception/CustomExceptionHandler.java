@@ -1,6 +1,6 @@
 package com.utc.securityproject.exception;
 
-import com.hina.socialmedia.dto.response.ApiResponse;
+import com.utc.securityproject.dto.response.ApiResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

@@ -1,10 +1,10 @@
 package com.utc.securityproject.controller;
 
-import com.hina.socialmedia.dto.request.RegisterRequest;
-import com.hina.socialmedia.dto.response.AccountDTO;
-import com.hina.socialmedia.entity.Account;
-import com.hina.socialmedia.mapper.AccountMapper;
-import com.hina.socialmedia.service.AccountService;
+import com.utc.securityproject.dto.request.RegisterRequest;
+import com.utc.securityproject.dto.response.AccountDTO;
+import com.utc.securityproject.entity.Account;
+import com.utc.securityproject.mapper.AccountMapper;
+import com.utc.securityproject.service.AccountService;
 import jakarta.validation.Valid;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -14,10 +14,12 @@ import org.springframework.web.bind.annotation.*;
 public class AccountController {
   private final AccountService accountService;
   private final PasswordEncoder passwordEncoder;
+  private final AccountMapper accountMapper;
   
-  public AccountController(AccountService accountService, PasswordEncoder passwordEncoder) {
+  public AccountController(AccountService accountService, PasswordEncoder passwordEncoder, AccountMapper accountMapper) {
     this.accountService = accountService;
     this.passwordEncoder = passwordEncoder;
+    this.accountMapper = accountMapper;
   }
   
   @PostMapping("/register")
@@ -32,7 +34,7 @@ public class AccountController {
   }
   
   @GetMapping("/profile")
-  public AccountDTO find(@RequestParam Long id) {
-    return AccountMapper.toDTO(accountService.find(id));
+  public AccountDTO find(@RequestParam String id) {
+    return accountMapper.toDTO(accountService.find(id));
   }
 }

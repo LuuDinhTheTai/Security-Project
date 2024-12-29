@@ -1,8 +1,8 @@
 package com.utc.securityproject.dto.request;
 
-import com.hina.socialmedia.exception.AppException;
-import com.hina.socialmedia.exception.ErrorCode;
-import com.hina.socialmedia.validation.ValidateEmail;
+import com.utc.securityproject.exception.AppException;
+import com.utc.securityproject.exception.ErrorCode;
+import com.utc.securityproject.validation.ValidateEmail;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 import lombok.NoArgsConstructor;

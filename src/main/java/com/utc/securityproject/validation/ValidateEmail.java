@@ -1,8 +1,8 @@
 package com.utc.securityproject.validation;
 
 
-import com.hina.socialmedia.exception.AppException;
-import com.hina.socialmedia.exception.ErrorCode;
+import com.utc.securityproject.exception.AppException;
+import com.utc.securityproject.exception.ErrorCode;
 import jakarta.validation.Constraint;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

@@ -1,6 +1,6 @@
 package com.utc.securityproject.dto.response;
 
-import com.hina.socialmedia.entity.base.BaseEntity;
+import com.utc.securityproject.entity.base.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -19,7 +19,5 @@ public class AccountDTO extends BaseEntity {
   private String password;
   
   private String roles;
-  
-  private List<PostDTO> posts;
   
 }

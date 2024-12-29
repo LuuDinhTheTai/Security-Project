@@ -1,6 +1,6 @@
 package com.utc.securityproject.configuration;
 
-import com.hina.socialmedia.audit.AuditorAwareImpl;
+import com.utc.securityproject.audit.AuditorAwareImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;

@@ -28,6 +28,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'com.mysql:mysql-connector-j'
@@ -35,6 +36,12 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api
+    implementation 'jakarta.validation:jakarta.validation-api:3.1.0'
+    // https://mvnrepository.com/artifact/com.nimbusds/nimbus-jose-jwt
+    implementation 'com.nimbusds:nimbus-jose-jwt:9.48'
+    // https://mvnrepository.com/artifact/org.mapstruct/mapstruct
+    implementation 'org.mapstruct:mapstruct:1.6.3'
 }
 
 tasks.named('test') {

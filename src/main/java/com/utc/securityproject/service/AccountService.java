@@ -1,7 +1,8 @@
 package com.utc.securityproject.service;
 
-import com.hina.socialmedia.entity.Account;
-import com.hina.socialmedia.service.base.BaseService;
+
+import com.utc.securityproject.entity.Account;
+import com.utc.securityproject.service.base.BaseService;
 
 //@Service
 public interface AccountService extends BaseService<Account> {
