@@ -21,25 +21,23 @@ import lombok.extern.slf4j.Slf4j;
 
 @Configuration
 @RequiredArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @Slf4j
 public class ApplicationInitConfig {
   
-  PasswordEncoder passwordEncoder;
+  private final PasswordEncoder passwordEncoder;
   
   @NonFinal
-  static final String ADMIN_USER_NAME = "admin";
+  private static final String ADMIN_USER_NAME = "admin";
   
   @NonFinal
-  static final String ADMIN_PASSWORD = "admin";
+  private static final String ADMIN_PASSWORD = "admin";
   
   @Bean
   @ConditionalOnProperty(
           prefix = "spring",
-          value = "datasource.driverClassName",
+          value = "datasource.driver-class-name",
           havingValue = "com.mysql.cj.jdbc.Driver")
   ApplicationRunner applicationRunner(AccountRepository accountRepository, RoleRepository roleRepository) {
-    log.info("Initializing application.....");
     return args -> {
       if (accountRepository.findByUsername(ADMIN_USER_NAME).isEmpty()) {
         roleRepository.save(Role.builder()

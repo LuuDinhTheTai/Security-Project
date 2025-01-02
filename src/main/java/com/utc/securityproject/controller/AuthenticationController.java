@@ -24,9 +24,8 @@ import lombok.experimental.FieldDefaults;
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class AuthenticationController {
-  AuthenticationService authenticationService;
+  private final AuthenticationService authenticationService;
   
   @PostMapping("/token")
   ApiResponse<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) {

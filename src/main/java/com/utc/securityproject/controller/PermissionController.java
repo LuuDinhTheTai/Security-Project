@@ -5,7 +5,7 @@ import java.util.List;
 import com.utc.securityproject.dto.request.PermissionRequest;
 import com.utc.securityproject.dto.response.ApiResponse;
 import com.utc.securityproject.dto.response.PermissionResponse;
-import com.utc.securityproject.service.PermissionService;
+import com.utc.securityproject.service.impl.PermissionService;
 import org.springframework.web.bind.annotation.*;
 
 import lombok.AccessLevel;

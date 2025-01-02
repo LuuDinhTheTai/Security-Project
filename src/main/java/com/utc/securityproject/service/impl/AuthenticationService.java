@@ -123,7 +123,7 @@ public class AuthenticationService {
     
     JWTClaimsSet jwtClaimsSet = new JWTClaimsSet.Builder()
                                         .subject(account.getEmail())
-                                        .issuer("devteria.com")
+                                        .issuer("LDTT")
                                         .issueTime(new Date())
                                         .expirationTime(new Date(
                                                 Instant.now().plus(VALID_DURATION, ChronoUnit.SECONDS).toEpochMilli()))

@@ -7,24 +7,23 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.ManyToMany;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.List;
 import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@SuperBuilder
 @EntityListeners(AuditingEntityListener.class)
 public class Account extends BaseEntity {
   @Column(unique = true)
-  @ValidateEmail
+//  @ValidateEmail
   private String email;
   @Column(nullable = false)
   private String username;
@@ -32,5 +31,5 @@ public class Account extends BaseEntity {
   private String password;
   
   @ManyToMany
-  Set<Role> roles;
+  private Set<Role> roles;
 }

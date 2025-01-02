@@ -25,16 +25,16 @@ public class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
-
+    
     @CreatedBy
     private String createdBy;
-
+    
     @CreatedDate
     private LocalDateTime createdAt;
-
+    
     @LastModifiedBy
     private String lastUpdatedBy;
-
+    
     @LastModifiedDate
     private LocalDateTime lastUpdatedAt;
 }
