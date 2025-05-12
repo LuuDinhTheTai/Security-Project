@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class RoleServiceImpl extends BaseServiceImpl<Role> implements RoleService {
+  
   public RoleServiceImpl(RoleRepository repository) {
     super(repository);
   }

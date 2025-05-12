@@ -19,7 +19,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 public class Permission extends BaseEntity {
-  String name;
   
+  String name;
   String description;
 }

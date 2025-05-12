@@ -25,6 +25,7 @@ import lombok.experimental.FieldDefaults;
 @RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthenticationController {
+  
   private final AuthenticationService authenticationService;
   
   @PostMapping("/token")

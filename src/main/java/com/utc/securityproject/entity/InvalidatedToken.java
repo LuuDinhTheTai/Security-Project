@@ -18,5 +18,6 @@ import lombok.experimental.SuperBuilder;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 public class InvalidatedToken extends BaseEntity {
+  
   Date expiryTime;
 }

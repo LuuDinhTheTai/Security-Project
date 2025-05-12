@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class CustomExceptionHandler {
+    
     @ExceptionHandler(value = AppException.class)
     ResponseEntity<?> handlingAppException(AppException exception) {
         ErrorCode errorCode = exception.getErrorCode();

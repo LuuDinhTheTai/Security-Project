@@ -8,9 +8,8 @@ import java.util.Optional;
 
 @Repository
 public interface AccountRepository extends BaseRepository<Account> {
+  
   Optional<Account> findByEmail(String email);
-  
   boolean existsByEmail(String email);
-  
   Optional<Account> findByUsername(String username);
 }

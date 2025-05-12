@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatusCode;
 
 @Getter
 public enum ErrorCode {
+  
   ENTITY_NOT_FOUND(404, "Account not found", HttpStatus.NOT_FOUND),
   INVALID_EMAIL(400, "Uncategorized error", HttpStatus.BAD_REQUEST),
   INVALID_PARAM(400, "Invalid param", HttpStatus.BAD_REQUEST),

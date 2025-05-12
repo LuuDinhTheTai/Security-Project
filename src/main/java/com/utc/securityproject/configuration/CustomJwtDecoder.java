@@ -1,6 +1,5 @@
 package com.utc.securityproject.configuration;
 
-
 import java.text.ParseException;
 import java.util.Objects;
 import javax.crypto.spec.SecretKeySpec;
@@ -20,6 +19,7 @@ import com.nimbusds.jose.JOSEException;
 
 @Component
 public class CustomJwtDecoder implements JwtDecoder {
+  
   @Value("${jwt.signerKey}")
   private String signerKey;
   

@@ -20,10 +20,9 @@ import java.util.Set;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 public class Role extends BaseEntity {
+  
   String name;
-  
   String description;
-  
   @ManyToMany
   Set<Permission> permissions;
 }

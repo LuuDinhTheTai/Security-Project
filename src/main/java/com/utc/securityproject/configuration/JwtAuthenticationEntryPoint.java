@@ -1,6 +1,5 @@
 package com.utc.securityproject.configuration;
 
-
 import java.io.IOException;
 
 import com.utc.securityproject.dto.response.ApiResponse;
@@ -16,6 +15,7 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
+  
   @Override
   public void commence(
           HttpServletRequest request, HttpServletResponse response, AuthenticationException authException)

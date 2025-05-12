@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class LoginRequest {
+  
   @NotEmpty
   @ValidateEmail
   private String email;
-  
   private String password;
 }

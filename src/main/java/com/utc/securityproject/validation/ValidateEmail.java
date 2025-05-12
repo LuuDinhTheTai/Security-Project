@@ -1,6 +1,5 @@
 package com.utc.securityproject.validation;
 
-
 import com.utc.securityproject.exception.AppException;
 import com.utc.securityproject.exception.ErrorCode;
 import jakarta.validation.Constraint;
@@ -10,16 +9,14 @@ import jakarta.validation.Payload;
 
 import java.lang.annotation.*;
 
-
 @Constraint(validatedBy = ValidateEmail.EmailValidation.class)
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.ANNOTATION_TYPE, ElementType.FIELD})
 public @interface ValidateEmail {
+  
   String message() default "Invalid email";
-  
   Class<?>[] groups() default {};
-  
   Class<? extends Payload>[] payload() default {};
   
   class EmailValidation implements ConstraintValidator<ValidateEmail, String> {

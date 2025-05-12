@@ -1,6 +1,5 @@
 package com.utc.securityproject.service.impl;
 
-
 import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;
@@ -38,6 +37,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @Slf4j
 public class AuthenticationService {
+  
   private final AccountRepository accountRepository;
   private final InvalidatedTokenRepository invalidatedTokenRepository;
   

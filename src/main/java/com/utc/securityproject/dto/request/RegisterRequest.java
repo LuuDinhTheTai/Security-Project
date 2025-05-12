@@ -14,16 +14,14 @@ import java.util.Objects;
 @NoArgsConstructor
 @Slf4j
 public class RegisterRequest {
+  
   @NotEmpty
   @ValidateEmail
   private String email;
-  
   @NotEmpty
   private String username;
-  
   @NotEmpty
   private String password;
-  
   @NotEmpty
   private String confirmPassword;
   
